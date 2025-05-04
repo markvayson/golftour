@@ -2,11 +2,12 @@ import LeaderboardCard from "@/components/LeaderboardCard";
 import { FlatList, Text, View } from "react-native";
 
 const data = [
-  { id: "1", name: "John Doe" },
-  { id: "2", name: "Jane Smith" },
-  { id: "3", name: "Alice Johnson" },
-  { id: "4", name: "Bob Brown" },
-  { id: "5", name: "Charlie Davis" },
+  { id: "1", series: "2024-2025", seriesName: "Al Ain Par 3 Series" },
+  { id: "2", series: "2024-2025", seriesName: "Al Ain Par 3 Series" },
+  { id: "3", series: "2025-2026", seriesName: "Al Ain Par 3 Series" },
+  { id: "4", series: "2025-2026", seriesName: "Al Ain Par 3 Series" },
+  { id: "5", series: "2026-2027", seriesName: "Al Ain Par 3 Series" },
+  { id: "6", series: "2026-2027", seriesName: "Al Ain Par 3 Series" },
 ];
 
 export default function Index() {

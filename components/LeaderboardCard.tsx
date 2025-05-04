@@ -3,13 +3,23 @@ import React from "react";
 import { Text } from "react-native";
 
 interface Props {
-  name: string;
+  seriesName: string;
+  series: string;
+  id: string;
 }
 
-const LeaderboardCard = ({ name }: Props) => {
+const LeaderboardCard = ({ id, series, seriesName }: Props) => {
   return (
-    <Link href={`/leaderboard/${name}`} asChild>
-      <Text>{name}</Text>
+    <Link
+      href={{
+        pathname: "/leaderboard/[id]",
+        params: { id: seriesName, year: series },
+      }}
+      asChild
+    >
+      <Text>
+        {seriesName} {series}
+      </Text>
     </Link>
   );
 };

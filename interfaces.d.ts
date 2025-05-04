@@ -1,6 +1,14 @@
-interface PlayerStatsCardProps {
+interface PlayerStatsCardProps extends StatsProps {
   id: number;
   name: string;
-  score: number;
+  nickname: string;
+  gender: string;
   rank?: number;
+}
+
+interface StatsProps {
+  gross?: number;
+  net?: number;
+  hcp?: number;
+  points: number;
 }
