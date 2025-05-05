@@ -2,23 +2,21 @@ import { Link } from "expo-router";
 import React from "react";
 import { Text } from "react-native";
 
-interface Props {
-  seriesName: string;
-  series: string;
-  id: string;
-}
-
-const LeaderboardCard = ({ id, series, seriesName }: Props) => {
+const LeaderboardCard = ({
+  title,
+  season_year,
+  description,
+}: EventSeriesProps) => {
   return (
     <Link
       href={{
         pathname: "/leaderboard/[id]",
-        params: { id: seriesName, year: series },
+        params: { id: title, year: season_year },
       }}
       asChild
     >
       <Text>
-        {seriesName} {series}
+        {title} {season_year}
       </Text>
     </Link>
   );

@@ -12,3 +12,9 @@ interface StatsProps {
   hcp?: number;
   points: number;
 }
+
+interface EventSeriesProps {
+  title: string;
+  season_year: string;
+  description?: string;
+}
