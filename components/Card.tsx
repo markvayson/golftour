@@ -23,7 +23,7 @@ const Card = ({ title, season_year, description, className }: Props) => {
       {description && <Text className="text-sm">{description}</Text>}
       {season_year && (
         <View className="flex-row items-center mt-2 gap-2">
-          <View className="flex-row -space-x-2 items-center">
+          <View className="flex-row -ml-5 bg-red-300 items-center">
             {Array.from({ length: 4 }, (_, index) => (
               <Image
                 key={index}
