@@ -1,5 +1,4 @@
-import { Players } from "@/constants/data";
-import { Client, Databases, ID, Query } from "react-native-appwrite";
+import { Client, Databases } from "react-native-appwrite";
 
 const databaseID = process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID!;
 const eventsSeriesId =
@@ -28,15 +27,15 @@ export const getAllEvents = async () => {
   }
 };
 
-Players.forEach(async (player) => {
-  const existingPlayer = await databases.listDocuments(databaseID, playersId, [
-    Query.equal("email", player.email),
-  ]);
+// Players.forEach(async (player) => {
+//   const existingPlayer = await databases.listDocuments(databaseID, playersId, [
+//     Query.equal("email", player.email),
+//   ]);
 
-  if (existingPlayer.documents.length === 0) {
-    await databases.createDocument(databaseID, playersId, ID.unique(), player);
-    console.log(`Player ${player.name} added to Appwrite`);
-  } else {
-    console.log(`Player ${player.name} already exists in Appwrite`);
-  }
-});
+//   if (existingPlayer.documents.length === 0) {
+//     await databases.createDocument(databaseID, playersId, ID.unique(), player);
+//     console.log(`Player ${player.name} added to Appwrite`);
+//   } else {
+//     console.log(`Player ${player.name} already exists in Appwrite`);
+//   }
+// });
