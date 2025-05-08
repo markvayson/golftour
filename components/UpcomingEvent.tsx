@@ -11,7 +11,11 @@ const UpcomingEvent = () => {
       <FlatList
         data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
         renderItem={({ item }) => (
-          <View className="h-[350px] bg-white w-[265px] ml-5 my-5 rounded-xl justify-end p-5 gap-2">
+          <View className="h-[350px] relative w-[265px] ml-5 my-5  justify-end p-5 gap-2">
+            <Image
+              source={{ uri: "https://placehold.co/265x350" }}
+              className="inset-0 absolute -z-10 rounded-xl"
+            />
             <Text className="text-xl font-medium">Title {item}</Text>
             <Text>Date</Text>
             <Text>Description</Text>

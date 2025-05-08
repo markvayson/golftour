@@ -1,3 +1,4 @@
+import HandicapList from "@/components/HandicapList";
 import OrderOfMerit from "@/components/OrderOfMerit";
 import ProfileBadge from "@/components/ProfileBadge";
 import SearchBar from "@/components/SearchBar";
@@ -13,11 +14,11 @@ export default function Index() {
       <ScrollView className=" ">
         <View className="flex-row items-center justify-between p-5 gap-5 pb-8">
           <SearchBar />
-          <ProfileBadge profile={profile} />
+          <ProfileBadge profile={profile} />1{" "}
         </View>
         <OrderOfMerit />
         <UpcomingEvent />
-
+        <HandicapList />
         <View className="pb-32"></View>
       </ScrollView>
     </SafeAreaView>

@@ -1,21 +1,17 @@
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Tabs } from "expo-router";
 
 export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarShowLabel: true,
+        tabBarShowLabel: false,
 
         tabBarStyle: {
-          backgroundColor: "#0F0D23",
-          borderRadius: 50,
-          marginHorizontal: 20,
-          marginBottom: 36,
+          backgroundColor: "#FFFFFF",
           height: 52,
           position: "absolute",
           overflow: "hidden",
-          borderWidth: 1,
-          borderColor: "#0F0D23",
         },
       }}
     >
@@ -24,6 +20,9 @@ export default function TabsLayout() {
         options={{
           title: "Home",
           headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome name="home" color={color} size={24} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -31,6 +30,9 @@ export default function TabsLayout() {
         options={{
           title: "Rankings",
           headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome name="trophy" color={color} size={24} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -38,6 +40,9 @@ export default function TabsLayout() {
         options={{
           title: "Profile",
           headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome name="user" color={color} size={24} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -45,6 +50,9 @@ export default function TabsLayout() {
         options={{
           title: "Settings",
           headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome name="cog" color={color} size={24} />
+          ),
         }}
       />
     </Tabs>
